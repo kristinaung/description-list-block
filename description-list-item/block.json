@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "native/description-list-item",
+	"version": "0.1.0",
+	"title": "Description List Item",
+	"category": "text",
+  "parent": [ "native/description-list" ],
+	"icon": "info",
+	"description": "Create a description list item.",
+	"supports": {
+		"html": false
+	},
+  "attributes": {
+		"dt": {
+			"type": "string",
+			"source": "html",
+			"selector": "dt"
+		},
+    "dd": {
+			"type": "string",
+			"source": "html",
+			"selector": "dd"
+		}
+	},
+  "example": {
+		"viewportWidth": 960
+  },
+	"textdomain": "description-list",
+	"editorScript": "file:./index.js"
+}

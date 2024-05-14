@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "native/description-list",
+	"version": "0.1.0",
+	"title": "Description List",
+	"category": "text",
+	"icon": "editor-ul",
+	"description": "Create a description list that encloses a group of terms and descriptions.",
+  "keywords": [
+    "description list",
+    "lists",
+    "definitions",
+    "terms",
+    "definition list",
+    "text"
+  ],
+	"supports": {
+		"html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "background": true,
+      "color": true,
+      "gradients": true
+    },
+		"spacing": {
+      "margin": true,
+      "padding": true
+    }
+	},
+  "attributes": {
+    "blockId": {
+      "type": "string"
+    },
+    "termWidth": {
+      "type": "string",
+      "default": "30%"
+    }
+	},
+	"example": {
+		"viewportWidth": 960
+  },
+	"textdomain": "description-list",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

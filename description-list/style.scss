@@ -1,0 +1,55 @@
+/* SCSS Variables */
+$m-break: 48.875em;   
+
+.wp-block-native-description-list {
+  margin-block-start: 1.5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0.5rem;
+    margin-block-end: 1rem;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 0.5rem;
+  }
+
+  dt {
+    font-weight: bold;
+
+    @media only screen and (min-width: $m-break) {
+      width: var(--term-width);
+    }
+  }
+
+  dd {
+    margin-inline-start: 0;
+  }
+
+  // Add padding if there's a background color applied.
+  &.has-background {
+    padding: 1.25em 2.375em;
+  }
+
+  /**
+  *  Block Style Variations.
+  */
+
+  // Display the term & description side by side.
+  &.is-style-side-by-side {
+    div {
+      display: grid;
+
+      @media only screen and (min-width: $m-break) {
+        grid-template-columns: var(--term-width) auto;
+      }
+    }
+
+    dt {
+      width: 100%;
+    }
+
+    dd {
+      margin-inline-start: 0;
+    }
+  }
+}
